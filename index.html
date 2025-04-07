@@ -1,258 +1,435 @@
+You said:
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>My Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nobin - Personal Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <style>
         body {
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            min-height: 100vh;
-            font-family: sans-serif;
-            background: linear-gradient(135deg, #afc2ce, #4B6C63, #e9d1ca, #d8b797, #e2cfd6, #d3c49f, #e3d1e9, #cfc9b6);
-            background-size: 800% 800%;
-            animation: gradient 20s ease infinite;
+            background-color: #ffffff;
         }
 
-        @keyframes gradient {
-            0% {
-                background-position: 0% 0%;
-            }
-
-            25% {
-                background-position: 100% 0%;
-            }
-
-            50% {
-                background-position: 100% 100%;
-            }
-
-            75% {
-                background-position: 0% 100%;
-            }
-
-            100% {
-                background-position: 0% 0%;
-            }
-        }
-
-        header {
-            color: #000000;
+        nav {
+            background-color: #202020;
+            color: white;
+            padding: 15px 0;
             text-align: center;
-            padding: 20px 40px 20px 40px; /* Reduced top padding */
         }
 
-        header h1 {
-            margin: 10;
-            font-size: 80px;
-        }
-
-        header h2 {
-            margin-top: 5px; /* Reduced the space from above */
-            font-size: 70px; /* Increased font size */
-        }
-
-        .logos {
-            text-align: center;
-            padding: 20px;
-            background: #fff;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            margin-bottom: 20px;
-        }
-
-        .logos img {
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
             margin: 0 15px;
-            height: 50px;
+            font-size: 1.1em;
+            text-transform: uppercase;
         }
 
-        .section {
+        nav a:hover {
+            background-color: #ffffff;
+            border-radius: 4px;
+        }
+
+        /* About Section */
+        .about {
+            position: relative;
+            background: url('Nobin.jpg') no-repeat center center/cover;
+            color: rgb(71, 71, 71);
+            text-align: left;
+            padding: 100px;
+            background-size: cover;
+            height: 700px;
             width: 100%;
-            padding: 20px;
-            text-align: center;
-            background: transparent;
         }
 
-        .section h2 {
-            font-size: 60px;
-            margin-bottom: 20px;
-            color: #333;
-            font-weight: bold;
+        .about-content {
+            max-width: 900px;
+            margin: 0;
+            padding-left: 5px;
         }
+
+        /* Set different sizes for each line */
+        .line-1, .line-2, .line-3, .line-4, .line-5 {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeSlideIn 1s forwards;
+            text-align: left;
+        }
+
+        .line-1 {
+            font-size: 6em;
+            animation-delay: 0s;
+        }
+
+        .line-2 {
+            font-size: 4em;
+            animation-delay: 0.5s;
+        }
+
+        .line-3 {
+            font-size: 2em;
+            animation-delay: 1s;
+        }
+
+        .line-4 {
+            font-size: 1.5em;
+            animation-delay: 1.5s;
+        }
+
+        .line-5 {
+            font-size: 1.5em;
+            animation-delay: 2s;
+        }
+
+        @keyframes fadeSlideIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .about-content h1, .about-content h2, .about-content p {
+            margin-bottom: 10px;
+        }
+
+        .about-content p,
+        .about-content .intro {
+            max-width: 700px;
+            margin: 20px 0;
+        }
+
+        .about .actions {
+            margin-top: 30px;
+        }
+
+        .about .actions button {
+            padding: 12px 30px;
+            font-size: 1em;
+            border: none;
+            background-color: #000; /* Permanent black background */
+            color: #fff; /* White text */
+            border-radius: 6px;
+            cursor: pointer;
+            transition: none; /* No transition effect */
+        }
+
+        .about .actions button:hover,
+        .about .actions button:active {
+            background-color: #000; /* Keep black on hover and active state */
+        }
+
+        @media (max-width: 768px) {
+            .about-content h1 {
+                font-size: 2em;
+            }
+
+            .about-content h2 {
+                font-size: 1.4em;
+            }
+
+            .about-content p {
+                font-size: 1em;
+            }
+        }
+
+        /* Education Section */
+        .education {
+            background-color: #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+            padding: 30px 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .education ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .education li {
+            padding: 10px 0;
+            font-size: 1.2em;
+        }
+
+        
+        
+        
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact {
+    text-align: left;
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+.contact-container {
+    max-width: 1500px;
+    margin-left: 45;         /* Push container to the left */
+    margin-right: auto;
+    padding-left: 40px;     /* Optional: adds breathing space from the edge */
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contact .form-group {
+    width: 100%;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 18px;
+    margin: 12px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #fafafa;
+    transition: border 0.3s ease;
+    font-size: 17px;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.contact button {
+    padding: 16px 34px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    font-size: 20px; 
+}
+
+.contact button:hover {
+    background-color: #000000;
+}
+.contact h1 {
+    font-size: 45px;      /* Increase this value as needed */
+    font-weight: 700;     /* Make it bold */
+    margin-bottom: 10px;  /* Space below the heading */
+}
+
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
 
         .container {
-            width: 1000px;
-            position: relative;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            margin: 0 auto;
-        }
+    width: 1200px;
+    position: relative;
+    display: flex;
+    justify-content: flex-start; /* Align to the left */
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
 
-        .container .card {
-            position: relative;
-            width: 300px;
-            height: 200px;
-            border-radius: 10px;
-            overflow: hidden;
-            margin: 10px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
-            transition: 0.5s;
-        }
+.container .card {
+    position: relative;
+    width: 350px;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+}
 
-        .container .card .face {
-            width: 100%;
-            height: 100%;
-            transition: 0.5s;
-            position: absolute;
-            top: 0;
-            left: 0;
-            box-sizing: border-box;
-        }
+.container .card .face {
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+}
 
-        .container .card .face.face1 {
-            background: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1;
-            transform: translateY(0);
-        }
+.container .card .face.face1 {
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(0);
+}
 
-        .container .card:hover .face.face1 {
-            transform: translateY(-100%);
-        }
+.container .card:hover .face.face1 {
+    transform: translateY(-100%);
+}
 
-        .container .card .face.face1 .content {
-            opacity: 1;
-            transition: 0.5s;
-        }
+.container .card .face.face1 .content {
+    opacity: 1;
+    transition: 0.5s;
+}
 
-        .container .card .face.face1 .content i {
-            max-width: 100px;
-            color: #fff;
-        }
+.container .card .face.face1 .content i {
+    max-width: 100px;
+    color: #fff;
+}
 
-        .container .card .face.face2 {
-            background: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-            transform: translateY(100%);
-            z-index: 0;
-        }
+.container .card .face.face2 {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(100%);
+    z-index: 0;
+}
 
-        .container .card:hover .face.face2 {
-            transform: translateY(0);
-        }
+.container .card:hover .face.face2 {
+    transform: translateY(0);
+}
 
-        .container .card .face.face2 .content p {
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            color: #414141;
-        }
+.container .card .face.face2 .content p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #414141;
+}
 
-        .container .card .face.face2 .content h3 {
-            margin: 0 0 10px 0;
-            padding: 0;
-            color: #414141;
-            font-size: 24px;
-            text-align: center;
-        }
+.container .card .face.face2 .content h3 {
+    margin: 0 0 10px 0;
+    padding: 0;
+    color: #414141;
+    font-size: 24px;
+    text-align: center;
+}
 
-        .container .card .icon {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            transition: 0.5s;
-            z-index: 1;
-        }
+.container .card .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    z-index: 1;
+}
 
-        .container .card:nth-child(1) .icon {
-            background: #ea4335;
-        }
+/* REMOVE or COMMENT OUT these */
+.container .card:nth-child(1) .icon {
+    background: #ea4335;
+}
 
-        .container .card:nth-child(2) .icon {
-            background: #3ddc84;
-        }
+.container .card:nth-child(2) .icon {
+    background: #3ddc84;
+}
 
-        .container .card:nth-child(3) .icon {
-            background: #0077b5;
-        }
+.container .card:nth-child(3) .icon {
+    background: #0077b5;
+}
 
-        .container .card:nth-child(4) .icon {
-            background: #e4405f;
-        }
+.container .card:nth-child(4) .icon {
+    background: #e4405f;
+}
 
-        .container .card:nth-child(5) .icon {
-            background: #1da1f2;
-        }
+.container .card:nth-child(5) .icon {
+    background: #1da1f2;
+}
 
-        .container .card:nth-child(6) .icon {
-            background: #4267b2;
-        }
+.container .card:nth-child(6) .icon {
+    background: #4267b2;
+}
 
-        .container .card:nth-child(7) .icon {
-            background: #333;
-        }
+.container .card:nth-child(7) .icon {
+    background: #333;
+}
 
-        .container .card .icon .fa {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 80px;
-            color: #fff;
-        }
+.container .card .icon .fa {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    color: #fff;
+}
 
-        .education {
-            background: transparent;
-            color: #333;
-            padding: 40px 20px;
-        }
-
-        .education .container {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .education .edu-card {
-            background: #f4f4f4;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px 0;
-            width: 80%;
-            max-width: 800px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .education .edu-card h3 {
-            margin: 0 0 10px;
-            font-size: 24px;
-        }
-
-        .education .edu-card p {
-            margin: 5px 0;
-        }
     </style>
 </head>
 
 <body>
-    <header>
-        <h1>Md Mezanur Rahman Nobin</h1>
-     
-    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about" class="about">
+        <div class="about-content">
+            <h1 class="line-1">Hey there!</h1>
+            <h2 class="line-2">I'm Md Mezanur Rahman Nobin</h2>
+            <p class="line-3">Currently a Mechanical Engineering student</p>
+            <p class="line-4">Rajshahi University of Engineering & Technology (RUET)</p>
+            <p class="line-4">Welcome to my little corner of the web!</p>
+            <div class="actions line-5">
+                <a href="resume.pdf" download>
+                    <button class="resume-btn">Download Resume</button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="contact-container">
+      <h1>Get in Touch</h1>
+      <p>If you have any questions or just want to say hello, feel free to message me!</p>
+      
+      <form action="#" method="post">
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Your Name" class="large-input" required />
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Your Email" class="large-input" required />
+        </div>
+        <div class="form-group">
+          <textarea name="message" rows="6" placeholder="Your Message" class="large-input" required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+  
+
+
 
     <section class="contact-info section">
-        <h2>Contact Information</h2>
+        <h2> </h2>
         <div class="container">
             <div class="card">
                 <div class="face face1">
@@ -376,15 +553,25 @@
         </div>
     </section>
 
-    <section class="education section">
+
+
+    <!-- Education Section -->
+    <section id="education" class="education">
         <h2>Education</h2>
-        <div class="container">
-            <div class="edu-card">
-                <h3>Rajshahi University of Engineering & Technology</h3>
-                <p>Bachelor of Science in Mechanical Engineering</p>
-            </div>
-        </div>
+        <ul>
+            <li><strong>B.Sc. in Mechanical Engineering</strong>: RUET - Ongoing</li>
+            <li><strong>Higher Secondary</strong>: BCIC College- [2022]</li>
+            
+        </ul>
     </section>
+
+  
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Nobin. All rights reserved.</p>
+    </footer>
+
 </body>
 
-</html>
+</html> 
