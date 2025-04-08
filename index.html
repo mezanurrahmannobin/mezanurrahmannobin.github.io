@@ -654,41 +654,115 @@
       
         
 
-        .btn {
-        color: white; /* Text color */
-        padding: 5px 25px;
-        text-decoration: none;
-        border-radius: 18px;
-        font-size: 14px;
-        display: inline-block;
-        text-align: center;
-        transition: all 0.3s ease;
-        transform: scale(1); /* Initial scale */
-    }
+      /* Basic Reset */
+.social-link {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+}
 
-    .btn-blue {
-        background-color: #ac2222; /* Red color */
-    }
+/* General styling */
+.social-link {
+    display: inline-flex; /* Use inline-flex for centering content */
+    align-items: center;  /* Vertically center text */
+    justify-content: center; /* Horizontally center text */
+    margin: 15px;
+    padding: 14px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #000; /* Change text color to black */
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: #333;
+    position: relative;
+    animation: pulseGlow 2s infinite, moveEffect 3s infinite;
+    transition: all 0.3s ease-in-out;
+}
 
-    .btn-blue:hover {
-        background-color: #0c0909; /* A darker shade on hover */
-        transform: scale(1.1); /* Slightly enlarge the button */
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow */
-    }
+/* Social icon spacing */
+.social-link i {
+    margin-right: 10px;
+    font-size: 18px;
+    color: #fff; /* Make icons white */
+}
 
-    .btn-green {
-        background-color: #3ac050; /* Green color */
-    }
+/* Colors for each platform */
+.social-link.phone { background-color: #ffffff; }
+.social-link.facebook { background-color: #ffffff; }
+.social-link.instagram { background-color:#ffffff; }
+.social-link.twitter { background-color: #ffffff; }
+.social-link.email { background-color:#ffffff; }
+.social-link.linkedin { background-color: #ffffff; }
 
-    .btn-green:hover {
-        background-color: #000000; /* A darker shade on hover */
-        transform: scale(1.1); /* Slightly enlarge the button */
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow */
+/* Pulse and Glow Effect */
+@keyframes pulseGlow {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 10px 2px rgba(0, 137, 255, 0.6); /* Lighter, brighter blue shadow */
     }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px 8px rgba(0, 137, 255, 1); /* Brighter blue shadow */
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px 2px rgba(0, 137, 255, 0.6); /* Lighter, brighter blue shadow */
+    }
+}
 
-    .btn i {
-        margin-right: 8px; /* Space between icon and text */
+/* Continuous Movement Effect */
+@keyframes moveEffect {
+    0% {
+        transform: translateY(0);
     }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Hover effect for more interaction */
+.social-link:hover {
+    background-color: #fff;
+    color: #333;
+    transform: scale(1.1);
+    box-shadow: 0 12px 24px rgba(0, 137, 255, 0.3); /* Lighter blue shadow on hover */
+}
+
+/* Hover effect: Icon transition */
+.social-link:hover i {
+    transform: rotate(360deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Underline transition effect */
+.social-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.social-link:hover::after {
+    opacity: 1;
+}
+
 
     </style>
 </head>
@@ -884,13 +958,33 @@
     <section id="contact">
         <h2>Contact Me</h2>
        
-        <p>If you'd like to get in touch, feel free to reach out to me:</p>
         
         <div>
           
-            <a href="tel:+880123456789" class="btn btn-green">
+            <a href="tel:+880123456789" class="social-link phone">
                 <i class="fas fa-phone-alt"></i> Call Me
             </a>
+            
+            <a href="https://www.facebook.com/yourusername" class="social-link facebook" target="_blank">
+                <i class="fab fa-facebook-f"></i> Facebook
+            </a>
+            
+            <a href="https://www.instagram.com/yourusername" class="social-link instagram" target="_blank">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+            
+            <a href="https://twitter.com/yourusername" class="social-link twitter" target="_blank">
+                <i class="fab fa-twitter"></i> Twitter
+            </a>
+            
+            <a href="mailto:your.email@example.com" class="social-link email">
+                <i class="fas fa-envelope"></i> Email
+            </a>
+            
+            <a href="https://www.linkedin.com/in/yourusername" class="social-link linkedin" target="_blank">
+                <i class="fab fa-linkedin-in"></i> LinkedIn
+            </a>
+            
         </div>
 
         <div style="height: 400px; width: 100%; margin-top: 40px;">
