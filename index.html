@@ -8,6 +8,8 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+</head>
 
     <style>
         /* General Styles */
@@ -325,11 +327,11 @@
         }
 
         .container .card:nth-child(1) .icon {
-            background: #ea4335;
+            background: #9b1e13;
         }
 
         .container .card:nth-child(2) .icon {
-            background: #3ddc84;
+            background: #29ff89;
         }
 
         .container .card:nth-child(3) .icon {
@@ -649,6 +651,45 @@
                 /* Adjust translateZ */
             }
         }
+      
+        
+
+        .btn {
+        color: white; /* Text color */
+        padding: 5px 25px;
+        text-decoration: none;
+        border-radius: 18px;
+        font-size: 14px;
+        display: inline-block;
+        text-align: center;
+        transition: all 0.3s ease;
+        transform: scale(1); /* Initial scale */
+    }
+
+    .btn-blue {
+        background-color: #ac2222; /* Red color */
+    }
+
+    .btn-blue:hover {
+        background-color: #0c0909; /* A darker shade on hover */
+        transform: scale(1.1); /* Slightly enlarge the button */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow */
+    }
+
+    .btn-green {
+        background-color: #3ac050; /* Green color */
+    }
+
+    .btn-green:hover {
+        background-color: #000000; /* A darker shade on hover */
+        transform: scale(1.1); /* Slightly enlarge the button */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow */
+    }
+
+    .btn i {
+        margin-right: 8px; /* Space between icon and text */
+    }
+
     </style>
 </head>
 
@@ -842,10 +883,16 @@
 
     <section id="contact">
         <h2>Contact Me</h2>
+       
         <p>If you'd like to get in touch, feel free to reach out to me:</p>
+        
         <div>
-            <a href="mailto:mezanur.ruet@gmail.com" class="btn">Email Me</a>
+          
+            <a href="tel:+880123456789" class="btn btn-green">
+                <i class="fas fa-phone-alt"></i> Call Me
+            </a>
         </div>
+
         <div style="height: 400px; width: 100%; margin-top: 40px;">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.778308118187!2d90.4125359!3d23.8103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c1c65723bf1b%3A0x55e84f8a09bc9f8f!2sRUET%20-%20Rajshahi%20University%20of%20Engineering%20%26%20Technology!5e0!3m2!1sen!2sbd!4v1625562923781!5m2!1sen!2sbd" width="100%" height="100%" frameborder="0"
                 style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
