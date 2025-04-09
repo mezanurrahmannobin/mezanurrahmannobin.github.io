@@ -193,12 +193,33 @@
             animation: fadeIn 3s ease-out;
         }
 
-        section h2 {
-            font-size: 2.5rem;
-            color: #2563EB;
-            opacity: 0;
-            animation: fadeInLine 1s forwards;
-        }
+        section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* or a specific height */
+}
+
+section h2 {
+    font-size: 2.5rem;
+    color: #2563EB;
+    opacity: 0;
+    animation: fadeInLine 1s forwards;
+    text-align: center;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    section {
+        height: auto; /* Adjust height if needed */
+        padding: 20px; /* Add some padding for better mobile view */
+    }
+
+    section h2 {
+        font-size: 2rem; /* Adjust font size for mobile */
+        text-align: center;
+    }
+}
 
         section p {
             font-size: 1.125rem;
