@@ -365,7 +365,7 @@
 
 
         /* Education Section */
-     /* Education Card */
+    /* Education Card */
 .education-card {
     background: #F9FAFB;
     border: 2px solid #2563EB;
@@ -380,19 +380,42 @@
     text-align: center;     /* Center text */
     opacity: 0;
     animation: fadeInLine 2s forwards;
+    width: 90%; /* Make card width responsive */
+    max-width: 400px; /* Set a max width to prevent it becoming too wide */
 }
 
+/* Education Card Heading */
 .education-card h3 {
-    margin: 0; /* Remove default margin */
+    margin: 0;
 }
 
+/* Education Card Paragraph */
 .education-card p {
     margin-top: 1px; /* Minimal gap between heading and paragraph */
 }
 
+/* Hover effect */
 .education-card:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 8px rgba(35, 150, 228, 0.15);
+}
+
+/* Mobile responsive styling */
+@media (max-width: 480px) {
+    .education-card {
+        padding: 15px; /* Reduce padding for smaller screens */
+        margin: 8px auto; /* Adjust margin for better spacing */
+        width: 90%; /* Ensure the card takes most of the screen width */
+        box-shadow: 0 4px 6px rgba(4, 136, 224, 0.2); /* Adjust shadow for mobile */
+    }
+
+    .education-card h3 {
+        font-size: 1.2rem; /* Slightly smaller font size for mobile */
+    }
+
+    .education-card p {
+        font-size: 0.9rem; /* Adjust font size for readability on smaller screens */
+    }
 }
 
 /* Skill Card */
