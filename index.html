@@ -234,7 +234,7 @@
         }
 /* Default styling for larger screens */
  .container {
-            width: 1000px;
+            width: 100%;
             position: relative;
             display: flex;
             justify-content: space-between;
@@ -394,9 +394,7 @@
     box-shadow: 0 6px 8px rgba(35, 150, 228, 0.15);
 }
 
-
-        /* Skills Section */
- /* Skill Card */
+/* Skill Card */
 .skill-card {
     background: #F9FAFB;
     border: 2px solid #2563EB;
@@ -413,6 +411,15 @@
 .skill-card:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 8px rgba(35, 150, 228, 0.15);
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+    .education-card,
+    .skill-card {
+        width: 95%;      /* Increase the card's width on mobile */
+        margin: 10px auto; /* Center the card by setting horizontal margins to auto */
+    }
 }
 
 
