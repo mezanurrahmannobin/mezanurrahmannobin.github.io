@@ -193,33 +193,12 @@
             animation: fadeIn 3s ease-out;
         }
 
-        section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* or a specific height */
-}
-
-section h2 {
-    font-size: 2.5rem;
-    color: #2563EB;
-    opacity: 0;
-    animation: fadeInLine 1s forwards;
-    text-align: center;
-}
-
-/* Mobile view */
-@media (max-width: 768px) {
-    section {
-        height: auto; /* Adjust height if needed */
-        padding: 20px; /* Add some padding for better mobile view */
-    }
-
-    section h2 {
-        font-size: 2rem; /* Adjust font size for mobile */
-        text-align: center;
-    }
-}
+        section h2 {
+            font-size: 2.5rem;
+            color: #2563EB;
+            opacity: 0;
+            animation: fadeInLine 1s forwards;
+        }
 
         section p {
             font-size: 1.125rem;
@@ -757,95 +736,45 @@ section h2 {
 
 
 
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-/* Message Card */
-.message-card {
-    background: #F9FAFB;
-    border: 2px solid #2563EB;
-    border-radius: 8px;
-    padding: 15px; /* Reduced padding for a more compact look */
-    margin: 20px auto;
-    width: 80%; /* Reduced the container width */
-    max-width: 100%;
-    box-shadow: 0 4px 6px rgba(4, 136, 224, 0.1);
-    transition: transform 0.3s;
-    opacity: 0;
-    animation: fadeInLine 2s forwards;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Ensures even spacing inside the card */
-    max-height: 500px; /* Set a max height to limit the container size */
-    overflow-y: auto; /* Adds scroll if content exceeds the max-height */
-}
+/* Contact Section */
 
-.message-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 8px rgba(35, 150, 228, 0.15);
+
+.message-card, .map-card {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  border-radius: 8px;
 }
 
 .message-card h3 {
-    text-align: center;
-    color: #333;
-    font-size: 22px;
-    margin-bottom: 15px; /* Reduced margin for better compactness */
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
-.message-card form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px; /* Reduced gap between elements */
-    flex-grow: 1;
+.message-card form input, .message-card form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
 }
 
-/* Wider Input and Textarea */
-.message-card input,
-.message-card textarea,
-.message-card button {
-    padding: 12px;
-    border-radius: 5px;
-    font-size: 16px;
-    border: 1px solid #ddd;
+.message-card form button {
+  padding: 10px 20px;
+  background-color: #3272eb;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.message-card input,
-.message-card textarea {
-    width: 97%; /* This ensures the input fields take up the full width of the form */
+.message-card form button:hover {
+  background-color: #e66c3b;
 }
-
-.message-card input {
-    height: 40px;
-}
-
-.message-card textarea {
-    height: 100px; /* Reduced height for the textarea */
-}
-
-.message-card button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.message-card button:hover {
-    background-color: #0056b3;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .message-card {
-        width: 90%; /* Adjust for mobile */
-    }
-}
-
 
 
 /* Map Section (100% Width) */
@@ -953,20 +882,7 @@ body {
         </div>
     </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <p>Loading</p>
-        <div class="model-container">
-            <div class="model">
-                <div class="front"></div>
-                <div class="back"></div>
-                <div class="left"></div>
-                <div class="right"></div>
-                <div class="top"></div>
-                <div class="bottom"></div>
-            </div>
-        </div>
-    </section>
+    
 
     <section id="contact">
         <h2>Contact Me</h2>
