@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Md Mezanur Rahman Nobin - Mechanical Engineering Student | CAD Designer | C Programmer</title>
+    <title>Md Mezanur Rahman Nobin</title>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -59,21 +59,7 @@
             color: #93C5FD;
         }
 
-        /* Search Box Styles */
-        .search-box {
-            padding: 8px 15px;
-            font-size: 16px;
-            border-radius: 5px;
-            border: none;
-            outline: none;
-            width: 200px;
-            transition: width 0.3s ease;
-        }
-
-        .search-box:focus {
-            width: 250px;
-        }
-
+      
         /* Hero Section */
         .hero-section {
             display: flex;
@@ -130,14 +116,14 @@
         }
 
         .hero-section h1 {
-            font-size: 5rem;
+            font-size: 7rem;
             font-weight: bold;
             color: #2563EB;
             animation-delay: 0s;
         }
 
         .hero-section .line2 {
-            font-size: 3rem;
+            font-size: 4rem;
             font-weight: bold;
             animation-delay: 0.3s;
         }
@@ -153,7 +139,7 @@
         }
 
         .hero-section .line5 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             animation-delay: 1.2s;
         }
 
@@ -241,7 +227,7 @@ section p {
             }
         }
 /* Default styling for larger screens */
- .container {
+.container {
             width: 100%;
             position: relative;
             display: flex;
@@ -252,8 +238,8 @@ section p {
 
         .container .card {
             position: relative;
-            width: 300px;
-            height: 200px;
+            width: 400px; /* Increased width */
+            height: 300px; /* Increased height */
             border-radius: 10px;
             overflow: hidden;
             margin: 10px;
@@ -320,7 +306,7 @@ section p {
             margin: 0 0 10px 0;
             padding: 0;
             color: #414141;
-            font-size: 24px;
+            font-size: 28px; /* Increased font size */
             text-align: center;
         }
 
@@ -367,11 +353,9 @@ section p {
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 80px;
+            font-size: 100px; /* Increased font size */
             color: #fff;
         }
-
-
      /* Education Card */
 .education-card {
     background: #F9FAFB;
@@ -403,130 +387,8 @@ section p {
 } 
 
 
-/* Skill Card */
-.skill-card {
-    background: #F9FAFB;
-    border: 2px solid #2563EB;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 10px auto;
-    box-shadow: 0 4px 6px rgba(4, 136, 224, 0.1);
-    transition: transform 0.3s;
-    opacity: 0;
-    animation: fadeInLine 2s forwards;
-    text-align: center; /* Center text inside the card */
-}
 
-.skill-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 8px rgba(35, 150, 228, 0.15);
-}
-
-/* Mobile Adjustments */
-@media (max-width: 768px) {
-    .education-card,
-    .skill-card {
-        width: calc(100% - 40px);  /* Full width minus some padding (20px on each side) */
-        margin: 20px auto;         /* Center them with auto horizontal margins */
-        border-radius: 20px;       /* Use the same border-radius as your hero section */
-        box-sizing: border-box;    /* Ensure padding is included in the width */
-    }
-}
-
-
-
-        /* 3D Model Container */
-        .model-container {
-            width: 100%;
-            height: 300px;
-            margin-top: 40px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            perspective: 1000px;
-        }
-
-        .model {
-            width: 150px;
-            height: 150px;
-            background-color: #2563EB;
-            transform-style: preserve-3d;
-            animation: rotateModel 5s infinite linear;
-        }
-
-        .model div {
-            position: absolute;
-            width: 150px;
-            height: 150px;
-            background-color: #1D4ED8;
-            border-radius: 10px;
-        }
-
-        .model .front {
-            transform: rotateY(0deg) translateZ(75px);
-        }
-
-        .model .back {
-            transform: rotateY(180deg) translateZ(75px);
-        }
-
-        .model .left {
-            transform: rotateY(-90deg) translateZ(75px);
-        }
-
-        .model .right {
-            transform: rotateY(90deg) translateZ(75px);
-        }
-
-        .model .top {
-            transform: rotateX(90deg) translateZ(75px);
-        }
-
-        .model .bottom {
-            transform: rotateX(-90deg) translateZ(75px);
-        }
-
-        @keyframes rotateModel {
-            0% {
-                transform: rotateY(0deg);
-            }
-
-            100% {
-                transform: rotateY(360deg);
-            }
-        }
-
-        @keyframes fadeInLine {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-
-            100% {
-                opacity: 1;
-            }
-        }
-
-        /* Footer Styles */
-        footer {
-            background-color: #2563EB;
-            padding: 10px;
-            text-align: center;
-            color: white;
-            margin-top: 40px;
-        }
-
+     
         /* Media Queries for Mobile Responsiveness */
         @media (max-width: 768px) {
             .hero-section h1 {
@@ -746,94 +608,6 @@ section p {
 
 
 
-/* Contact Section */
-
-
-.message-card, .map-card {
-  background-color: #fff;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-bottom: 30px;
-  border-radius: 8px;
-  width: 100%;
-}
-
-.message-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.message-card form input, .message-card form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-.message-card form button {
-  padding: 10px 20px;
-  background-color: #3272eb;
-  border: none;
-  color: #fff;
-  font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.message-card form button:hover {
-  background-color: #e66c3b;
-}
-
-/* Map Section (100% Width) */
-.map-card {
-    width: 100%;
-}
-
-.map-card iframe {
-    border: 0;
-    width: 100%;
-    height: 400px;
-    transition: transform 0.3s ease-in-out;
-}
-
-/* Fade-In Animation */
-@keyframes fadeInLine {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .message-card, .map-card {
-        width: 100%;
-        padding: 20px;
-    }
-
-    .message-card h3 {
-        font-size: 20px;
-    }
-
-    /* Ensure form fields take full width on small screens */
-    .message-card form input,
-    .message-card form textarea {
-        width: 100%;  /* Ensure full width */
-    }
-
-    .message-card form button {
-        width: 100%;  /* Make the button full-width on mobile */
-    }
-}
-
-
-
 
 
     </style>
@@ -875,56 +649,21 @@ section p {
     </section>
 
     <section id="education">
-        <h2>Education</h2>
+       
         <div class="grid-container">
             <div class="education-card">
                 <h3>B.Sc. in Mechanical Engineering</h3>
                 <p>Rajshahi University of Engineering & Technology (RUET) – 2022 to Present</p>
             </div>
-            <div class="education-card">
-                <h3>Higher Secondary Certificate</h3>
-                <p>Bangladesh Chemical Industries Corporation College, BCIC College – 2022</p>
-            </div>
            
-        </div>
-    </section>
-
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills-container">
-            <div class="skill-card">CAD Design</div>
-            <div class="skill-card">SolidWorks</div>
+           
         </div>
     </section>
 
     
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-       
-        <div class="message-card">
-          <!-- Message Form Section -->
-          <form action="your_form_submission_url_here" method="POST">
-              <input type="text" name="name" placeholder="Your Name" required>
-              <input type="email" name="email" placeholder="Your Email" required>
-              <textarea name="message" placeholder="Your Message" required></textarea>
-              <button type="submit">Send Message</button>
-          </form>
-      </div>
-      
-      <div class="map-card">
-          <!-- Google Map Embed -->
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.778308118187!2d90.4125359!3d23.8103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c1c65723bf1b%3A0x55e84f8a09bc9f8f!2sRUET%20-%20Rajshahi%20University%20of%20Engineering%20%26%20Technology!5e0!3m2!1sen!2sbd!4v1625562923781!5m2!1sen!2sbd"
-              width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-      </div>
-      
-      
-      
-    </section>
 
-    <footer>
-        <p>©Md Mezanur Rahman Nobin</p>
-    </footer>
+   
 
 </body>
 
