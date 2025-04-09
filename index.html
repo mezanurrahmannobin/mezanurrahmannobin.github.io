@@ -365,18 +365,19 @@
 
 
         /* Education Section */
-        .education-card {
+     /* Education Card */
+.education-card {
     background: #F9FAFB;
     border: 2px solid #2563EB;
     border-radius: 8px;
     padding: 20px;
-    margin: 10px;
+    margin: 10px auto;
     box-shadow: 0 4px 6px rgba(4, 136, 224, 0.1);
     transition: transform 0.3s;
     display: flex;
-    flex-direction: column; /* Ensure content is stacked vertically */
-    align-items: center; /* Center-align content */
-    text-align: center; /* Ensure text is centered */
+    flex-direction: column; /* Stack content vertically */
+    align-items: center;    /* Center content horizontally */
+    text-align: center;     /* Center text */
     opacity: 0;
     animation: fadeInLine 2s forwards;
 }
@@ -386,7 +387,7 @@
 }
 
 .education-card p {
-    margin-top: 1px; /* Reduced gap between heading and paragraph */
+    margin-top: 1px; /* Minimal gap between heading and paragraph */
 }
 
 .education-card:hover {
@@ -400,12 +401,12 @@
     border: 2px solid #2563EB;
     border-radius: 8px;
     padding: 20px;
-    margin: 10px;
+    margin: 10px auto;
     box-shadow: 0 4px 6px rgba(4, 136, 224, 0.1);
     transition: transform 0.3s;
     opacity: 0;
     animation: fadeInLine 2s forwards;
-    text-align: center; /* Centers text inside the card */
+    text-align: center; /* Center text inside the card */
 }
 
 .skill-card:hover {
@@ -413,12 +414,14 @@
     box-shadow: 0 6px 8px rgba(35, 150, 228, 0.15);
 }
 
-/* Mobile view adjustments */
+/* Mobile Adjustments */
 @media (max-width: 768px) {
     .education-card,
     .skill-card {
-        width: 95%;      /* Increase the card's width on mobile */
-        margin: 10px auto; /* Center the card by setting horizontal margins to auto */
+        width: calc(100% - 40px);  /* Full width minus some padding (20px on each side) */
+        margin: 20px auto;         /* Center them with auto horizontal margins */
+        border-radius: 20px;       /* Use the same border-radius as your hero section */
+        box-sizing: border-box;    /* Ensure padding is included in the width */
     }
 }
 
