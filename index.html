@@ -12,7 +12,7 @@
 </head>
 
     <style>
-        /* General Styles */
+       
         body {
             font-family: 'Segoe UI', sans-serif;
             background-color: #ffffff;
@@ -57,7 +57,7 @@
 
 
 
-        /* Hero Section */
+       
         .hero-section {
             display: flex;
             flex-direction: column;
@@ -81,11 +81,11 @@
             box-shadow: 0 4px 15px rgba(169, 169, 169, 0.5);
             margin-bottom: 20px;
             animation: shadowAnimation 2s infinite ease-in-out;
-            max-width: 90%; /* Make image responsive */
-            height: auto; /* Maintain aspect ratio */
+            max-width: 90%;
+            height: auto; 
         }
 
-        /* Keyframe animation for the shadow */
+       
         @keyframes shadowAnimation {
             0% {
                 box-shadow: 0 4px 15px rgba(34, 103, 182, 0.5);
@@ -141,7 +141,7 @@
 }
 
 .hero-section .line6 {
-    font-size: 2.5rem; /* Adjust this if needed */
+    font-size: 2.5rem; 
     animation-delay: 1.5s;
     color: #2563EB;
     font-weight: bold;
@@ -171,7 +171,7 @@
     background-color: #0D74B3;
 }
 
-/* Animation Keyframes */
+
 @keyframes fadeInLine {
     from {
         opacity: 0;
@@ -184,7 +184,7 @@
 }
 
 
-     /* Education Card */
+    
 .education-card {
     background: #F9FAFB;
     border: 2px solid #2563EB;
@@ -194,19 +194,19 @@
     box-shadow: 0 4px 6px rgba(4, 136, 224, 0.1);
     transition: transform 0.3s;
     display: flex;
-    flex-direction: column; /* Stack content vertically */
-    align-items: center;    /* Center content horizontally */
-    text-align: center;     /* Center text */
+    flex-direction: column; 
+    align-items: center;   
+    text-align: center;     
     opacity: 0;
     animation: fadeInLine 2s forwards;
 }
 
 .education-card h3 {
-    margin: 0; /* Remove default margin */
+    margin: 0;
 }
 
 .education-card p {
-    margin-top: 1px; /* Minimal gap between heading and paragraph */
+    margin-top: 1px; 
 }
 
 .education-card:hover {
@@ -226,7 +226,7 @@
     transition: transform 0.3s;
     opacity: 0;
     animation: fadeInLine 2s forwards;
-    text-align: center; /* Center text inside the card */
+    text-align: center; 
 }
 
 .skill-card:hover {
@@ -234,103 +234,23 @@
     box-shadow: 0 6px 8px rgba(35, 150, 228, 0.15);
 }
 
-/* Mobile Adjustments */
+
 @media (max-width: 768px) {
     .education-card,
     .skill-card {
-        width: calc(100% - 40px);  /* Full width minus some padding (20px on each side) */
-        margin: 20px auto;         /* Center them with auto horizontal margins */
-        border-radius: 20px;       /* Use the same border-radius as your hero section */
-        box-sizing: border-box;    /* Ensure padding is included in the width */
+        width: calc(100% - 40px);  
+        margin: 20px auto;       
+        border-radius: 20px;     
+        box-sizing: border-box;    
     }
 }
 
 
 
-        /* 3D Model Container */
-        .model-container {
-            width: 100%;
-            height: 300px;
-            margin-top: 40px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            perspective: 1000px;
-        }
+       
+  
 
-        .model {
-            width: 150px;
-            height: 150px;
-            background-color: #2563EB;
-            transform-style: preserve-3d;
-            animation: rotateModel 5s infinite linear;
-        }
-
-        .model div {
-            position: absolute;
-            width: 150px;
-            height: 150px;
-            background-color: #1D4ED8;
-            border-radius: 10px;
-        }
-
-        .model .front {
-            transform: rotateY(0deg) translateZ(75px);
-        }
-
-        .model .back {
-            transform: rotateY(180deg) translateZ(75px);
-        }
-
-        .model .left {
-            transform: rotateY(-90deg) translateZ(75px);
-        }
-
-        .model .right {
-            transform: rotateY(90deg) translateZ(75px);
-        }
-
-        .model .top {
-            transform: rotateX(90deg) translateZ(75px);
-        }
-
-        .model .bottom {
-            transform: rotateX(-90deg) translateZ(75px);
-        }
-
-        @keyframes rotateModel {
-            0% {
-                transform: rotateY(0deg);
-            }
-
-            100% {
-                transform: rotateY(360deg);
-            }
-        }
-
-        @keyframes fadeInLine {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-
-            100% {
-                opacity: 1;
-            }
-        }
-
-        /* Footer Styles */
+       
         footer {
     background-color: #2563EB;
     padding: 10px;
@@ -340,7 +260,7 @@
     width: 100%;
 }
 
-        /* Media Queries for Mobile Responsiveness */
+        
         @media (max-width: 768px) {
             .hero-section h1 {
                 font-size: 2.5rem;
@@ -369,107 +289,106 @@
 
             .nav-container {
                 flex-direction: column;
-                /* Stack links and search on mobile */
+                
                 align-items: flex-start;
-                /* Align items to the start */
+            
             }
 
             .nav-links {
                 flex-direction: column;
-                /* Stack links vertically */
+              
                 gap: 10px;
                 margin-bottom: 10px;
-                /* Add space below links */
+                
             }
 
             .search-box {
                 width: 100%;
-                /* Full-width search on mobile */
+               
             }
 
             .container {
                 width: 100%;
-                /* Take full width */
+              
                 flex-direction: column;
-                /* Stack cards */
+             
                 align-items: center;
-                /* Center cards */
+               
             }
 
             .container .card {
                 width: 90%;
-                /* Adjust card width */
+               
                 max-width: 400px;
-                /* Limit card width */
+               
                 height: auto;
-                /* Adjust height based on content */
+               
             }
 
             .skills-container {
                 grid-template-columns: 1fr;
-                /* Single column on mobile */
+              
             }
 
             .skill-card {
                 width: 90%;
-                /* Adjust skill card width */
+               
                 font-size: 1rem;
-                /* Adjust font size for mobile */
+               
             }
 
             .model-container {
                 height: 200px;
-                /* Adjust model container height */
+              
             }
 
             .model {
                 width: 100px;
-                /* Adjust model width */
+              
                 height: 100px;
-                /* Adjust model height */
+              
             }
 
             .model div {
                 width: 100px;
-                /* Adjust model div width */
+                
                 height: 100px;
-                /* Adjust model div height */
+                
             }
 
             .model .front {
                 transform: rotateY(0deg) translateZ(50px);
-                /* Adjust translateZ */
+               
             }
 
             .model .back {
                 transform: rotateY(180deg) translateZ(50px);
-                /* Adjust translateZ */
+               
             }
 
             .model .left {
                 transform: rotateY(-90deg) translateZ(50px);
-                /* Adjust translateZ */
+                
             }
 
             .model .right {
                 transform: rotateY(90deg) translateZ(50px);
-                /* Adjust translateZ */
+               
             }
 
             .model .top {
                 transform: rotateX(90deg) translateZ(50px);
-                /* Adjust translateZ */
+                
             }
 
             .model .bottom {
                 transform: rotateX(-90deg) translateZ(50px);
-                /* Adjust translateZ */
+                
             }
         }
       
       
 
- /* Container for all links */
  div {
     width: 1000px;
     display: flex;
@@ -479,7 +398,7 @@
     margin: 0 auto;
 }
 
-/* Card style for links */
+
 .social-link {
     position: relative;
     width: 100px;
@@ -493,7 +412,7 @@
     perspective: 1000px;
 }
 
-/* Inner wrapper for flip */
+
 .social-link::before,
 .social-link::after {
     content: '';
@@ -509,14 +428,14 @@
     color: #fff;
 }
 
-/* Front face - icon centered */
+
 .social-link::before {
     z-index: 2;
     transform: translateY(0);
     font-family: "FontAwesome";
 }
 
-/* Back face - text label */
+
 .social-link::after {
     background: #fff;
     color: #0059ff;
@@ -527,7 +446,6 @@
     text-align: center;
 }
 
-/* Flip on hover */
 .social-link:hover::before {
     transform: translateY(-100%);
 }
@@ -536,15 +454,15 @@
     transform: translateY(0);
 }
 
-/* Custom backgrounds & icons */
-.social-link.phone::before { content: "\f095"; background: #25d366; }       /* fa-phone */
-.social-link.facebook::before { content: "\f09a"; background: #4267B2; }    /* fa-facebook-f */
-.social-link.instagram::before { content: "\f16d"; background: #E4405F; }   /* fa-instagram */
-.social-link.twitter::before { content: "\f099"; background: #1DA1F2; }     /* fa-twitter */
-.social-link.email::before { content: "\f0e0"; background: #7f7f7f; }       /* fa-envelope */
-.social-link.linkedin::before { content: "\f0e1"; background: #0077B5; }    /* fa-linkedin */
 
-/* Text labels on back face */
+.social-link.phone::before { content: "\f095"; background: #25d366; }     
+.social-link.facebook::before { content: "\f09a"; background: #4267B2; }    
+.social-link.instagram::before { content: "\f16d"; background: #E4405F; }   
+.social-link.twitter::before { content: "\f099"; background: #1DA1F2; }     
+.social-link.email::before { content: "\f0e0"; background: #7f7f7f; }      
+.social-link.linkedin::before { content: "\f0e1"; background: #0077B5; }   
+
+
 .social-link.phone::after { content: "Call Me"; }
 .social-link.facebook::after { content: "Facebook"; }
 .social-link.instagram::after { content: "Instagram"; }
@@ -558,7 +476,6 @@
 
 
 
-/* General Styles */
 body {
             font-family: 'Segoe UI', sans-serif;
             background-color: #ffffff;
@@ -603,13 +520,13 @@ body {
     }
 
     .contact-form button {
-  width: 100vw;                  /* Full screen width */
-  margin-left: 0px;            /* Negate container side padding */
+  width: 100vw;                  
+  margin-left: 0px;           
   padding: 14px;
   background-color: #2563EB;
   color: white;
   border: none;
-  border-radius: 0 0 10px 10px;  /* Keep rounded bottom if you want */
+  border-radius: 0 0 10px 10px;  
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
@@ -622,7 +539,7 @@ body {
     }
 
 
-/* Map Section (100% Width) */
+
 .map-section {
     width: 100%;
     margin-top: 40px;
@@ -635,7 +552,7 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
-/* Fade-In Animation */
+
 @keyframes fadeInLine {
     0% {
         opacity: 0;
@@ -647,7 +564,7 @@ body {
     }
 }
 
-/* Responsive Design */
+
 @media screen and (max-width: 768px) {
     .message-card, .map-section {
         width: 100%;
@@ -659,6 +576,13 @@ body {
     }
 }
 
+
+.skills-image-box img {
+    width: 100%;
+    display: block;
+    margin-top: 2px;
+    margin-bottom: 20px;
+    border-radius: 12px; }
 
 
     </style>
@@ -726,25 +650,17 @@ body {
         <p class="line6">Skills</p>
         </div>
         
-    <section id="skills">
-      
-        <div class="skills-container">
-            <div class="skill-card">CAD Design</div>
-            <div class="skill-card">SolidWorks</div>
-        </div>
-    </section>
+  <section id="skills">
+    <div class="skills-container">
+        <div class="skill-card">certified solidworks professional (cswp)</div>
+    </div>
+
+    <div class="skills-image-box">
+        <img src="1.jpeg" alt="Skills Related Image">
+    </div>
+</section>
 
    
-    <div class="hero-section">
-        <p class="line6">Projects</p>
-        </div>
-
-        <div class="hero-section">
-          
-            <p class="line3">Loading</p>
-           
-    
-        </div>
 
 
     <section id="contact">
@@ -762,8 +678,7 @@ body {
               const name = document.getElementById("userName").value.trim();
               const email = document.getElementById("userEmail").value.trim();
               const message = document.getElementById("userMessage").value.trim();
-              const phoneNumber = "+8801865648959"; // replace with your number
-        
+              const phoneNumber = "+8801865648959"; 
               if (!name || !email || !message) {
   alert("Please fill out all fields.");
   return;
@@ -783,7 +698,7 @@ if (!emailPattern.test(email)) {
           </script>
       
       <div class="map-card">
-          <!-- Google Map Embed -->
+        
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.778308118187!2d90.4125359!3d23.8103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c1c65723bf1b%3A0x55e84f8a09bc9f8f!2sRUET%20-%20Rajshahi%20University%20of%20Engineering%20%26%20Technology!5e0!3m2!1sen!2sbd!4v1625562923781!5m2!1sen!2sbd"
               width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       </div>
